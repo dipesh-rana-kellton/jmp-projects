@@ -35,6 +35,11 @@
         <div class="shantigramLogo">
             <a href="#"> <img src="images/shantigram.png" alt="Adani Shantigram"> </a>
         </div>
+
+        <div class="navToggle">
+            <span></span>
+            <span></span>
+        </div>
     </header>
     <!-- ========  Header starts Ends =========== -->
 
@@ -145,10 +150,11 @@
             </div>
 
         </div>
-        <div class="container">
-            <ul class="tabContent amenitiesTabContent">
-                <!-- premium flat tab -->
-                <li id="premium">
+
+        <ul class="tabContent amenitiesTabContent">
+            <!-- premium flat tab -->
+            <li id="premium">
+                <div class="container">
                     <div class="features">
                         <div class="featuresLeft">
                             <h4>2, 2.5, 3 <span>BHK Flats</span></h4>
@@ -237,44 +243,54 @@
                             <li id="2bhkplan">
                                 <figure>
                                     <img src="images/2bhkplan.jpg" alt="">
-                                    <img data-target="unitplanModal" data-toggle="modal" src="images/2bhkunitplan.jpg"
-                                        alt="">
+                                    <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
+                                        src="images/2bhkunitplan.jpg" alt="">
+                                    <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
+                                        src="images/mobile/2bhkunitplan.jpg" alt="">
                                 </figure>
                             </li>
                             <li id="2_5bhkplan">
                                 <figure>
                                     <img src="images/2.5bhkplan.jpg" alt="">
-                                    <img data-target="unitplanModal" data-toggle="modal" src="images/2.5bhkunitplan.jpg"
-                                        alt="">
+                                    <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
+                                        src="images/2.5bhkunitplan.jpg" alt="">
+                                    <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
+                                        src="images/mobile/2.5bhkunitplan.jpg" alt="">
                                 </figure>
                             </li>
                             <li id="3bhkplan">
                                 <figure>
                                     <img src="images/3bhkplan.jpg" alt="">
-                                    <img data-target="unitplanModal" data-toggle="modal" src="images/3bhkunitplan.jpg"
-                                        alt="">
+                                    <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
+                                        src="images/3bhkunitplan.jpg" alt="">
+                                    <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
+                                        src="images/3bhkunitplan.jpg" alt="">
                                 </figure>
                             </li>
                         </ul>
                     </section>
-
-                    <!--gallery Section starts Here -->
-                    <section class="gallery section">
+                </div>
+                <!--gallery Section starts Here -->
+                <section class="gallery section">
+                    <div class="container">
                         <h3 class="section-heading">Gallery</h3>
-                        <div class="owl-carousel galleryCarousel" id="galleryCarousel1">
-                            <img src="images/STATEOFART3.jpg" alt="Gallery">
-                            <img src="images/STATEOFART4.jpg" alt="Gallery">
-                            <img src="images/STATEOFART5.jpg" alt="Gallery">
-                        </div>
+                    </div>
+                    <div class="owl-carousel galleryCarousel" id="galleryCarousel1">
+                        <img src="images/Gallery-Prem-1.jpg" alt="Gallery">
+                        <img src="images/Gallery-Prem-2.jpg" alt="Gallery">
+                        <img src="images/Gallery-Prem-3.jpg" alt="Gallery">
+                        <img src="images/Gallery-Prem-4.jpg" alt="Gallery">
+                    </div>
 
-                        <a href="#" class="downloadBrochure">Download Brochure</a>
-                    </section>
-                    <!--gallery Section ends Here -->
+                    <a href="#" class="downloadBrochure">Download Brochure</a>
+                </section>
+                <!--gallery Section ends Here -->
 
-                </li>
+            </li>
 
-                <!-- luxurious flat tab -->
-                <li id="luxurious">
+            <!-- luxurious flat tab -->
+            <li id="luxurious">
+                <div class="container">
                     <div class="features">
                         <div class="featuresLeft">
                             <h4>3 & 5 <span>BHK Flats</span></h4>
@@ -323,9 +339,6 @@
                         </div>
                     </div>
 
-
-
-
                     <section class="masterPlan section">
                         <h3 class="section-heading">Master Plan</h3>
                         <div class="planLayout">
@@ -364,44 +377,52 @@
                             <li id="3bhkplanA">
                                 <figure>
                                     <img src="images/3bhkplanA.jpg" alt="">
-                                    <img data-target="unitplanModal" data-toggle="modal" src="images/3bhkunitplanA.jpg"
-                                        alt="">
+                                    <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
+                                        src="images/3bhkunitplanA.jpg" alt="">
+                                    <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
+                                        src="images/mobile/3bhkunitplanA.jpg" alt="">
                                 </figure>
                             </li>
                             <li id="3bhkplanB">
                                 <figure>
                                     <img src="images/3bhkplanB.jpg" alt="">
-                                    <img data-target="unitplanModal" data-toggle="modal" src="images/3bhkunitplanB.jpg"
-                                        alt="">
+                                    <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
+                                        src="images/3bhkunitplanB.jpg" alt="">
+                                    <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
+                                        src="images/mobile/3bhkunitplanB.jpg" alt="">
                                 </figure>
                             </li>
                             <li id="4bhkplan">
                                 <figure>
                                     <img src="images/4bhkplan.jpg" alt="">
-                                    <img data-target="unitplanModal" data-toggle="modal" src="images/4bhkunitplan.jpg"
-                                        alt="">
+                                    <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
+                                        src="images/4bhkunitplan.jpg" alt="">
+                                    <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
+                                        src="images/mobile/4bhkunitplan.jpg" alt="">
                                 </figure>
                             </li>
                         </ul>
                     </section>
 
-
-                    <!--gallery Section starts Here -->
-                    <section class="gallery section">
+                </div>
+                <!--gallery Section starts Here -->
+                <section class="gallery section">
+                    <div class="container">
                         <h3 class="section-heading">Gallery</h3>
-                        <div class="owl-carousel galleryCarousel" id="galleryCarousel2">
-                            <img src="images/STATEOFART3.jpg" alt="Gallery">
-                            <img src="images/STATEOFART4.jpg" alt="Gallery">
-                            <img src="images/STATEOFART5.jpg" alt="Gallery">
-                        </div>
+                    </div>
+                    <div class="owl-carousel galleryCarousel" id="galleryCarousel2">
+                        <img src="images/Gallery-Lux-1.jpg" alt="Gallery">
+                        <img src="images/Gallery-Lux-2.jpg" alt="Gallery">
+                        <img src="images/Gallery-Lux-3.jpg" alt="Gallery">
+                    </div>
 
-                        <a href="#" class="downloadBrochure">Download Brochure</a>
-                    </section>
-                    <!--gallery Section ends Here -->
+                    <a href="#" class="downloadBrochure">Download Brochure</a>
+                </section>
+                <!--gallery Section ends Here -->
 
-                </li>
-            </ul>
-        </div>
+            </li>
+        </ul>
+
     </section>
     <!-- =========== Aminities Section ends Here ============ -->
 
@@ -452,13 +473,13 @@
                     <li><a href="#"><img src="images/ytube.png" alt="Youtube"></a></li>
                 </ul>
                 <a href="#" class="footerLogo"><img src="images/adaniLogo.png"></a>
+                <p class="contactInfo">
+                    <a href="www.adanirealty.com" target="_blank">www.adanirealty.com</a> | Toll free: <a
+                        href="tel:18001080009" target="_blank"></a>1800-108-0009
+                </p>
             </div>
 
-            <p class="contactInfo">
-                <a href="www.adanirealty.com" target="_blank">www.adanirealty.com</a> | Toll free: <a
-                    href="tel:18001080009" target="_blank"></a>1800-108-0009
-            </p>
-            </p>
+
         </div>
     </footer>
     <!-- =========== Footer Section ends Here ============ -->
@@ -512,6 +533,9 @@
             </div>
         </div>
     </div>
+
+    <!-- sticky Enquire -->
+    <a href="javascript:void()" class="sticky-enquire" data-toggle="modal" data-target="enquireModal">Enquire Now</a>
 
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>

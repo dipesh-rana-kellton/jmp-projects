@@ -6,11 +6,24 @@ $(document).ready(function () {
     });
 
     $("#galleryCarousel1, #galleryCarousel2").owlCarousel({
-        margin: 30,
         loop: true,
         items: 1,
-        stagePadding: 300,
-        nav: true
+        nav: true,
+        dots: false,
+        responsive: {
+            // breakpoint from 0 up
+            0: {
+                stagePadding: 25,
+                margin: 0,
+                center: true
+
+            },
+            // breakpoint from 768 up
+            992: {
+                stagePadding: 300,
+                margin: 30,
+            }
+        }
     });
 
     $(window).scroll(function () {
@@ -44,7 +57,7 @@ $(document).ready(function () {
     $('.mainNav li:not(.enquireBtn) a').on('click', function (e) {
         e.preventDefault();
         let target = $(this).attr('href');
-        let scrollDis = $(target).offset().top - 92;
+        let scrollDis = $(target).offset().top - 180;
         $('html,body').animate({ scrollTop: scrollDis }, 500);
 
         $(this).parent('li').addClass('active').siblings().removeClass('active')
@@ -66,5 +79,25 @@ $(document).ready(function () {
         var url = $(this).attr('src');
         $('#unitplanModal .unitPlanLarge').attr('src', url)
     })
+
+    if ($(window).width() < 992) {
+        $('.navToggle, .mainNav li a').on('click', function () {
+            $('.navToggle').toggleClass('collapsed');
+            $('.mainNav').fadeToggle();
+            $('body').toggleClass('o-hidden');
+        })
+
+        /////
+        $(window).scroll(function () {
+            let scrollLast = $('#location').offset().top;
+            if ($(this).scrollTop() > 800 && $(this).scrollTop() < scrollLast) {
+                $('.sticky-enquire').fadeIn()
+            }
+            else {
+                $('.sticky-enquire').fadeOut()
+            }
+        })
+    }
+
 
 })

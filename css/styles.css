@@ -46,7 +46,15 @@ img {
 .container {
     width: 1275px;
     margin: auto;
-    max-width: 96%;
+    max-width: calc(100% - 40px);
+}
+
+.visible-sm {
+    display: none;
+}
+
+.visible-lg {
+    display: block;
 }
 
 header {
@@ -60,6 +68,10 @@ header {
     justify-content: space-between;
     align-items: center;
     transition: all linear 0.3s 0s;
+}
+
+.navToggle {
+    display: none;
 }
 
 .logo img,
@@ -160,6 +172,7 @@ header.light-bg .mainNav li.enquireBtn a {
     height: 900px;
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
 }
 
 .carouselItem .itemLeft {
@@ -242,7 +255,7 @@ header.light-bg .mainNav li.enquireBtn a {
 
 .intro .container:first-child {
     width: 760px;
-    max-width: 96%;
+    max-width: calc(100% - 40px);
     text-align: center;
 }
 
@@ -313,12 +326,12 @@ header.light-bg .mainNav li.enquireBtn a {
     border-radius: 10px 10px 0 0;
     border-bottom: none !important;
     font-size: 33px;
-    font-weight: bold;
 }
 
 .amenitiesTabHead a.active {
     position: relative;
     top: 1px;
+    font-weight: bold;
 }
 
 .amenitiesTabContent {
@@ -367,7 +380,7 @@ header.light-bg .mainNav li.enquireBtn a {
 .features .featuresRight h4 {
     font-size: 28px;
     color: #000;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 35px;
     display: none;
 }
@@ -407,6 +420,7 @@ header.light-bg .mainNav li.enquireBtn a {
 .planLayout {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .planLayout figure {
@@ -483,6 +497,10 @@ header.light-bg .mainNav li.enquireBtn a {
     color: #333;
 }
 
+.floorPlanTabhead a:last-child {
+    margin-right: 0;
+}
+
 .floorPlanTabhead a.active,
 .floorPlanTabhead a:hover {
     background-color: #910251;
@@ -501,6 +519,7 @@ header.light-bg .mainNav li.enquireBtn a {
 .floorPlanTabContent figure {
     display: flex;
     align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 .floorPlanTabContent figure img {
@@ -669,6 +688,7 @@ footer p {
     top: 50%;
     left: 50%;
     width: 400px;
+    max-width: 92%;
     transform: translate(-50%, -50%);
     background-color: #fff;
     box-shadow: 0 0 1.5em hsl(0deg 0% 0% / 35%);
@@ -791,8 +811,388 @@ footer p {
     width: 94%;
 }
 
-@media (max-width:767px) {
+.sticky-enquire {
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 100px;
+    background-color: #175134;
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 8;
+    display: none;
+}
+
+@media (max-width:991px) {
+    .visible-sm {
+        display: block;
+    }
+
+    .visible-lg {
+        display: none;
+    }
+
+    #mainCarousel {
+        margin-bottom: 90px;
+    }
+
+    #mainCarousel .owl-dots {
+        right: 16px;
+    }
+
+    #mainCarousel .owl-dots button {
+        width: 4px;
+        height: 4px;
+    }
+
+    #mainCarousel .owl-dots button.active {
+        height: 16px;
+    }
+
+    .carouselItem .itemLeft {
+        width: 100%;
+        height: auto
+    }
+
+    .carouselItem .itemRight {
+        width: 100%;
+        height: auto;
+    }
+
+    .sliderContent {
+        width: 100%;
+        margin: 0;
+        padding: 0 30px;
+        text-align: center;
+    }
+
+    .sliderContent h3 {
+        font-size: 52px;
+    }
+
+    .sliderContent strong {
+        font-size: 32px;
+    }
+
+    .sliderContent p {
+        font-size: 16px;
+    }
+
+    .intro h2 {
+        font-size: 34px;
+        font-weight: 700;
+    }
+
+    .intro p {
+        font-size: 16px;
+    }
+
+    .intro ul li {
+        width: 50%;
+        margin-bottom: 60px;
+    }
+
+    .intro ul li img {
+        height: 48px;
+    }
+
+    .intro ul li span {
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+        margin-top: 20px;
+    }
+
+    .amenitiesTabContent {
+        padding-top: 50px;
+    }
+
+    .amenitiesTabHead a {
+        font-size: 20px;
+        padding: 12px;
+        margin: 0 5px;
+        border-radius: 15px 15px 0 0;
+    }
+
+    .features .featuresLeft h4 {
+        margin-bottom: 50px;
+    }
+
+    .features .featuresLeft {
+        width: 100%;
+        text-align: center;
+    }
+
+    .features .featuresRight {
+        width: 100%;
+    }
+
     .features .featuresRight h4 {
         display: block;
+    }
+
+    .features .featuresRight li {
+        width: 50%;
+        margin-bottom: 50px;
+    }
+
+    .features .featuresRight li img {
+        height: 45px;
+    }
+
+    .features .featuresRight li span {
+        font-size: 16px;
+        line-height: 19px;
+        font-weight: 500;
+        margin-top: 20px;
+    }
+
+    .section {
+        margin-top: 70px;
+    }
+
+    .section-heading {
+        font-size: 28px;
+    }
+
+    .planLayout figure {
+        width: 100%;
+        padding: 0;
+        border: 0;
+        box-shadow: none;
+        height: auto;
+    }
+
+    .legends {
+        width: 100%;
+        margin: 10px 0 0;
+    }
+
+    .floorPlanTabhead a {
+        font-size: 16px;
+        margin-right: 20px;
+        padding: 10px 20px;
+        flex-grow: 1;
+    }
+
+    #luxurious .floorPlanTabhead a {
+        font-size: 14px;
+        margin-right: 10px;
+        padding: 10px;
+    }
+
+    .floorPlanTabhead a.active,
+    .floorPlanTabhead a:hover {
+        margin-right: 19px;
+    }
+
+    .floorPlanTabContent figure img {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .galleryCarousel .owl-item:not(.active) img {
+        transform: none;
+    }
+
+    body .owl-carousel.galleryCarousel .owl-nav {
+        width: 96%;
+        left: 2%;
+        top: 50%;
+        margin-top: -14px;
+    }
+
+    body .owl-carousel.galleryCarousel .owl-nav button {
+        width: 13px;
+        height: 28px;
+        background-size: contain;
+    }
+
+    .downloadBrochure {
+        font-size: 16px;
+        padding: 12px 28px;
+        margin-top: 40px;
+    }
+
+    .location .section-heading {
+        margin-bottom: 10px;
+    }
+
+    .location figure img {
+        height: 340px;
+        width: 100%;
+        object-fit: cover;
+        border-radius: 12px;
+    }
+
+    .social {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footerLogo {
+        order: 1;
+        margin-bottom: 30px;
+        margin-top: 15px;
+    }
+
+    .contactInfo {
+        order: 2;
+        margin-bottom: 30px;
+    }
+
+    .social ul {
+        order: 3;
+    }
+
+    .rera a {
+        display: block;
+        text-decoration: underline;
+    }
+
+    footer {
+        margin-top: 80px;
+    }
+
+    header {
+        padding: 15px;
+        justify-content: flex-start;
+    }
+
+    .mainNav {
+        position: fixed;
+        width: 100%;
+        top: 0;
+        background: #fff;
+        left: 0;
+        height: 100vh;
+        color: #000;
+        text-align: center;
+        z-index: 99;
+        display: none;
+    }
+
+    .mainNav ul {
+        display: block;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+
+    }
+
+    .mainNav li {
+        font-size: 24px;
+        display: block;
+        margin: 20px 0;
+    }
+
+    .mainNav li.enquireBtn {
+        margin-top: 60px;
+        font-size: 16px;
+    }
+
+    .mainNav li:not(.enquireBtn).active:after,
+    .mainNav li:not(.enquireBtn):hover:after {
+        content: none;
+    }
+
+    body header.light-bg .mainNav li.enquireBtn a,
+    body header .mainNav li.enquireBtn a {
+        padding: 10px 40px;
+        color: #000;
+        font-weight: 500;
+        border-color: #000;
+    }
+
+    .logo img {
+        height: 24px;
+        margin-right: 10px;
+    }
+
+    .shantigramLogo img {
+        height: 30px;
+    }
+
+    .amenitiesTabHead {
+        top: 64px;
+    }
+
+    .navToggle {
+        background-color: rgba(255, 255, 255, 0.2);
+        padding: 5px 17px;
+        border-radius: 25px;
+        display: block;
+        position: absolute;
+        right: 16px;
+        z-index: 999;
+    }
+
+    header .navToggle.collapsed,
+    header.light-bg .navToggle.collapsed {
+        background-color: #fff;
+        color: #333;
+        border: 1px solid #333;
+    }
+
+    header.light-bg .navToggle {
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+    .navToggle span {
+        width: 15px;
+        height: 1px;
+        background-color: #fff;
+        display: block;
+        margin: 5px 0;
+    }
+
+    .navToggle.collapsed span {
+        background-color: #333;
+    }
+
+    .navToggle.collapsed span:first-child {
+        transform: rotate(45deg);
+        position: relative;
+        top: 3px;
+    }
+
+    .navToggle.collapsed span:last-child {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -2px;
+    }
+
+    header .mainNav li a {
+        color: #333;
+    }
+
+    .modalContent {
+        top: auto;
+        bottom: 0;
+        transform: none;
+        left: 0;
+        width: 100%;
+        max-width: none;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .modalContent .content-inner {
+        max-height: 80vh;
+        padding: 15px;
+    }
+
+    .modalContent .close-modal {
+        right: 10px;
+        top: -15px;
+    }
+
+    #unitplanModal .modalContent {
+        width: 100%;
+    }
+
+    .sticky-enquire {
+        display: none;
     }
 }
