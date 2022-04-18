@@ -143,6 +143,16 @@ header.light-bg .mainNav li.enquireBtn a {
 #mainCarousel {
     margin-bottom: 160px;
     position: relative;
+
+}
+
+#mainCarousel::after {
+    content: url('../images/bannerOverlay.png');
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    overflow: hidden;
 }
 
 #mainCarousel .owl-dots {
@@ -195,6 +205,16 @@ header.light-bg .mainNav li.enquireBtn a {
     height: 100%;
     display: flex;
     align-items: center;
+}
+
+.carouselItem .artistict-text {
+    position: absolute;
+    bottom: 85px;
+    font-size: 14px;
+    opacity: 0.2;
+    color: #fff;
+    left: -30px;
+    transform: rotate(-90deg);
 }
 
 .owl-item:nth-child(1) .carouselItem .itemLeft {
@@ -296,7 +316,8 @@ header.light-bg .mainNav li.enquireBtn a {
 }
 
 .amenitiesTabHead {
-    border-bottom: 1px solid #C4498A;
+    /* border-bottom: 1px solid #C4498A; */
+    border-bottom: 1px solid #ddd;
     background-color: #fff;
     position: sticky;
     top: 92px;
@@ -307,7 +328,7 @@ header.light-bg .mainNav li.enquireBtn a {
     display: flex;
 }
 
-.amenitiesTabHead a[href="#premium"] {
+/* .amenitiesTabHead a[href="#premium"] {
     color: #C4498A;
     border: 1px solid #C4498A;
 }
@@ -315,23 +336,34 @@ header.light-bg .mainNav li.enquireBtn a {
 .amenitiesTabHead a[href="#luxurious"] {
     color: #5BB454;
     border: 1px solid #5BB454;
-}
+} */
 
 .amenitiesTabHead a {
     background-color: #fff;
     flex-grow: 1;
     text-align: center;
-    margin: 0 10px;
     padding: 22px;
     border-radius: 10px 10px 0 0;
-    border-bottom: none !important;
-    font-size: 33px;
+    /* border-bottom: none !important; */
+    font-size: 32px;
+    color: #333;
+    position: relative;
 }
 
 .amenitiesTabHead a.active {
-    position: relative;
-    top: 1px;
     font-weight: bold;
+}
+
+.amenitiesTabHead a.active:after {
+    /* position: relative;
+    top: 1px; */
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    content: '';
+    width: 60%;
+    border-bottom: 3px solid #000;
 }
 
 .amenitiesTabContent {
@@ -425,7 +457,7 @@ header.light-bg .mainNav li.enquireBtn a {
 
 .planLayout figure {
     width: 79%;
-    height: 400px;
+    height: 510px;
     overflow: auto;
     box-shadow: 0 0 0 1px #B5B5B5;
     border-radius: 12px;
@@ -436,29 +468,34 @@ header.light-bg .mainNav li.enquireBtn a {
     width: 100%;
 }
 
-.planLayout figure::-webkit-scrollbar-track {
+.planLayout figure::-webkit-scrollbar-track,
+.legends ul::-webkit-scrollbar-track {
     border-radius: 0.125rem;
     background-color: transparent;
     margin: 1rem 0;
 }
 
-.planLayout figure::-webkit-scrollbar {
+.planLayout figure::-webkit-scrollbar,
+.legends ul::-webkit-scrollbar {
     width: 6px;
     border-radius: 0.125rem;
 }
 
-.planLayout figure::-webkit-scrollbar-thumb {
+.planLayout figure::-webkit-scrollbar-thumb,
+.legends ul::-webkit-scrollbar-thumb {
     border-radius: 0.25rem;
     background-color: #cccccc;
 }
 
-.planLayout figure::-webkit-scrollbar-button {
+.planLayout figure::-webkit-scrollbar-button,
+.legends ul::-webkit-scrollbar-button {
     display: none;
     width: 0;
     height: 0;
 }
 
-.planLayout figure::-webkit-scrollbar-corner {
+.planLayout figure::-webkit-scrollbar-corner,
+.legends ul::-webkit-scrollbar-corner {
     background-color: transparent;
 }
 
@@ -471,6 +508,11 @@ header.light-bg .mainNav li.enquireBtn a {
     font-weight: 700;
     font-size: 16px;
     color: #161615;
+}
+
+.legends ul {
+    max-height: 480px;
+    overflow: auto;
 }
 
 .legends ul li {
@@ -503,18 +545,18 @@ header.light-bg .mainNav li.enquireBtn a {
 
 .floorPlanTabhead a.active,
 .floorPlanTabhead a:hover {
-    background-color: #910251;
-    border-color: #910251;
+    background-color: #333;
+    border-color: #333;
     font-weight: 500;
     color: #fff;
     margin-right: 31px;
 }
 
-#luxurious .floorPlanTabhead a.active,
+/* #luxurious .floorPlanTabhead a.active,
 #luxurious .floorPlanTabhead a:hover {
     background-color: #5BB454;
     border-color: #5BB454;
-}
+} */
 
 .floorPlanTabContent figure {
     display: flex;
@@ -553,7 +595,7 @@ header.light-bg .mainNav li.enquireBtn a {
 }
 
 .galleryCarousel .owl-item:not(.active) img {
-    opacity: 0.4;
+    opacity: 0.3;
     transform: scale(1, 0.8);
 }
 
@@ -626,7 +668,7 @@ footer p {
 }
 
 .disclaimer {
-    margin: 40px 0 20px;
+    margin: 40px 0 30px;
 }
 
 .disclaimer h5 {
@@ -642,7 +684,7 @@ footer p {
 .social ul {
     display: flex;
     justify-content: center;
-    margin-bottom: 25px;
+    margin-top: 20px;
 }
 
 .social ul li {
@@ -650,7 +692,7 @@ footer p {
 }
 
 .contactInfo {
-    text-align: left;
+    margin-top: 20px;
     font-weight: 300;
 }
 
@@ -704,7 +746,7 @@ footer p {
 }
 
 .modalContent h4 {
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
     margin: 15px 0;
 }
@@ -729,14 +771,14 @@ footer p {
 
 .floating-input,
 .floating-select {
-    font-size: 14px;
+    font-size: 16px;
     padding: 4px 4px;
     display: block;
     width: 100%;
     height: 30px;
     background-color: transparent;
     border: none;
-    border-bottom: 1px solid #757575;
+    border-bottom: 1px solid #d5d5d5
 }
 
 .floating-input:focus,
@@ -761,7 +803,7 @@ footer p {
 .floating-input:not(:placeholder-shown)~label {
     top: -18px;
     font-size: 14px;
-    color: #333;
+    color: #999;
 }
 
 .floating-select:focus~label,
@@ -773,7 +815,7 @@ footer p {
 
 .checkbox {
     margin-top: 35px;
-    font-size: 11px;
+    font-size: 12px;
 }
 
 .checkbox [type="checkbox"] {
@@ -809,6 +851,7 @@ footer p {
 
 #unitplanModal .modalContent {
     width: 94%;
+    text-align: center;
 }
 
 .sticky-enquire {
@@ -880,7 +923,7 @@ footer p {
     }
 
     .intro h2 {
-        font-size: 34px;
+        font-size: 32px;
         font-weight: 700;
     }
 
@@ -938,7 +981,7 @@ footer p {
     }
 
     .features .featuresRight li img {
-        height: 45px;
+        height: auto;
     }
 
     .features .featuresRight li span {
@@ -1032,21 +1075,6 @@ footer p {
         justify-content: center;
     }
 
-    .footerLogo {
-        order: 1;
-        margin-bottom: 30px;
-        margin-top: 15px;
-    }
-
-    .contactInfo {
-        order: 2;
-        margin-bottom: 30px;
-    }
-
-    .social ul {
-        order: 3;
-    }
-
     .rera a {
         display: block;
         text-decoration: underline;
@@ -1120,39 +1148,47 @@ footer p {
     }
 
     .navToggle {
-        background-color: rgba(255, 255, 255, 0.2);
-        padding: 5px 17px;
-        border-radius: 25px;
         display: block;
         position: absolute;
         right: 16px;
+        top: 11px;
         z-index: 999;
     }
 
     header .navToggle.collapsed,
     header.light-bg .navToggle.collapsed {
-        background-color: #fff;
         color: #333;
-        border: 1px solid #333;
+    }
+
+    header .navToggle.collapsed span:first-child,
+    header.light-bg .navToggle.collapsed span:first-child {
+        opacity: 0;
     }
 
     header.light-bg .navToggle {
-        background-color: rgba(0, 0, 0, 0.5);
+        text-align: right;
+    }
+
+    .navToggle span:first-child {
+        width: 11px;
+        display: table;
+        margin-left: auto;
     }
 
     .navToggle span {
-        width: 15px;
+        width: 22px;
         height: 1px;
         background-color: #fff;
         display: block;
-        margin: 5px 0;
+        margin-top: 7px;
     }
 
-    .navToggle.collapsed span {
+    .navToggle.collapsed span,
+    header.light-bg .navToggle span {
         background-color: #333;
     }
 
-    .navToggle.collapsed span:first-child {
+    .navToggle.collapsed span:nth-child(2) {
         transform: rotate(45deg);
         position: relative;
         top: 3px;
@@ -1161,7 +1197,7 @@ footer p {
     .navToggle.collapsed span:last-child {
         transform: rotate(-45deg);
         position: relative;
-        top: -2px;
+        top: -4px;
     }
 
     header .mainNav li a {
