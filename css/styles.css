@@ -60,7 +60,7 @@ img {
 header {
     position: fixed;
     width: 100%;
-    padding: 20px 50px;
+    padding: 16px 50px;
     top: 0;
     left: 0;
     z-index: 9;
@@ -147,12 +147,15 @@ header.light-bg .mainNav li.enquireBtn a {
 }
 
 #mainCarousel::after {
-    content: url('../images/bannerOverlay.png');
+    content: '';
     position: absolute;
     left: 0;
     bottom: 0;
     width: 100%;
     overflow: hidden;
+    height: 200px;
+    background: url('../images/bannerOverlay.png') no-repeat left bottom;
+    background-size: 100% auto;
 }
 
 #mainCarousel .owl-dots {
@@ -179,7 +182,7 @@ header.light-bg .mainNav li.enquireBtn a {
 }
 
 .carouselItem {
-    height: 900px;
+    height: 100vh;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -247,7 +250,7 @@ header.light-bg .mainNav li.enquireBtn a {
 }
 
 .sliderContent h3 {
-    font-size: 56px;
+    font-size: 52px;
     line-height: 1.2;
     color: #F7A534;
     font-weight: 900;
@@ -320,7 +323,7 @@ header.light-bg .mainNav li.enquireBtn a {
     border-bottom: 1px solid #ddd;
     background-color: #fff;
     position: sticky;
-    top: 92px;
+    top: 75px;
     z-index: 8;
 }
 
@@ -342,7 +345,7 @@ header.light-bg .mainNav li.enquireBtn a {
     background-color: #fff;
     flex-grow: 1;
     text-align: center;
-    padding: 22px;
+    padding: 0 15px 15px;
     border-radius: 10px 10px 0 0;
     /* border-bottom: none !important; */
     font-size: 32px;
@@ -364,6 +367,14 @@ header.light-bg .mainNav li.enquireBtn a {
     content: '';
     width: 60%;
     border-bottom: 3px solid #000;
+}
+
+.amenitiesTabHead a[href="#premium"].active:after {
+    border-bottom-color: #C4498A;
+}
+
+.amenitiesTabHead a[href="#luxurious"].active:after {
+    border-bottom-color: #5BB454;
 }
 
 .amenitiesTabContent {
@@ -394,8 +405,9 @@ header.light-bg .mainNav li.enquireBtn a {
 
 .features .featuresLeft h4 span {
     font-weight: 500;
-    font-size: 18px;
+    font-size: 20px;
     display: block;
+    margin: 5px 0;
 }
 
 .features .featuresLeft h4 small {
@@ -419,7 +431,7 @@ header.light-bg .mainNav li.enquireBtn a {
 
 .features .featuresRight ul {
     display: flex;
-    align-items: flex-start;
+    align-items: baseline;
     flex-wrap: wrap;
 }
 
@@ -537,6 +549,7 @@ header.light-bg .mainNav li.enquireBtn a {
     border-radius: 50px;
     margin-right: 32px;
     color: #333;
+    text-align: center;
 }
 
 .floorPlanTabhead a:last-child {
@@ -545,28 +558,43 @@ header.light-bg .mainNav li.enquireBtn a {
 
 .floorPlanTabhead a.active,
 .floorPlanTabhead a:hover {
-    background-color: #333;
-    border-color: #333;
+    background-color: #C4498A;
+    border-color: #C4498A;
     font-weight: 500;
     color: #fff;
     margin-right: 31px;
 }
 
-/* #luxurious .floorPlanTabhead a.active,
+#luxurious .floorPlanTabhead a.active,
 #luxurious .floorPlanTabhead a:hover {
     background-color: #5BB454;
     border-color: #5BB454;
-} */
+}
 
-.floorPlanTabContent figure {
+.floorPlanTabContent .unitPlans {
     display: flex;
     align-items: flex-start;
     flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.floorPlanTabContent figure {
+    width: 50%;
+    padding: 10px;
+}
+
+.floorPlanTabContent figure+figure {
+    width: 45%;
+}
+
+.floorPlanTabContent figure h4 {
+    font-weight: 700;
+    padding: 20px 10px;
+    font-size: 20px;
 }
 
 .floorPlanTabContent figure img {
-    width: 50%;
-    padding: 10px;
+    width: 100%;
     object-fit: contain;
 }
 
@@ -592,6 +620,7 @@ header.light-bg .mainNav li.enquireBtn a {
 
 .galleryCarousel img {
     transition: all linear 0.2s 0s;
+    border-radius: 15px;
 }
 
 .galleryCarousel .owl-item:not(.active) img {
@@ -612,7 +641,7 @@ body .owl-carousel.galleryCarousel .owl-nav button {
     width: 20px;
     height: 40px;
     display: block;
-
+    background-repeat: no-repeat;
 }
 
 body .owl-carousel.galleryCarousel .owl-prev {
@@ -624,6 +653,18 @@ body .owl-carousel.galleryCarousel .owl-prev {
 body .owl-carousel.galleryCarousel .owl-next {
     float: right;
     background: url("../images/rightAngle.png");
+}
+
+.galleryCarousel .owl-item span {
+    display: none;
+}
+
+.galleryCarousel .owl-item.active span {
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    padding: 20px 0 0;
+    color: #333;
 }
 
 .downloadBrochure {
@@ -665,6 +706,11 @@ footer p {
 
 .rera a {
     font-weight: 700;
+    text-decoration: underline;
+}
+
+.rera a:hover {
+    text-decoration: none;
 }
 
 .disclaimer {
@@ -685,6 +731,7 @@ footer p {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    width: 100%;
 }
 
 .social ul li {
@@ -751,6 +798,10 @@ footer p {
     margin: 15px 0;
 }
 
+.modalContent .action {
+    margin-bottom: 20px;
+}
+
 .modalContent p {
     font-size: 15px;
 }
@@ -815,7 +866,7 @@ footer p {
 
 .checkbox {
     margin-top: 35px;
-    font-size: 12px;
+    font-size: 14px;
 }
 
 .checkbox [type="checkbox"] {
@@ -858,13 +909,18 @@ footer p {
     padding: 10px 20px;
     color: #fff;
     border-radius: 100px;
-    background-color: #175134;
+    background-color: #2A7788;
     position: fixed;
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 8;
     display: none;
+}
+
+.mfp-title {
+    text-align: center;
+    margin: 4px 0;
 }
 
 @media (max-width:991px) {
@@ -877,7 +933,7 @@ footer p {
     }
 
     #mainCarousel {
-        margin-bottom: 90px;
+        margin-bottom: 80px;
     }
 
     #mainCarousel .owl-dots {
@@ -893,14 +949,31 @@ footer p {
         height: 16px;
     }
 
+    .carouselItem {
+        height: 100vh;
+    }
+
     .carouselItem .itemLeft {
         width: 100%;
-        height: auto
+        height: 50vh;
+        align-items: flex-end;
+        padding-bottom: 10px;
     }
 
     .carouselItem .itemRight {
         width: 100%;
-        height: auto;
+        height: 50vh;
+    }
+
+    .carouselItem .itemLeft img {
+        height: 80%;
+    }
+
+    .carouselItem .artistict-text {
+        bottom: auto;
+        font-size: 12px;
+        top: 38vh;
+        left: -35px;
     }
 
     .sliderContent {
@@ -911,15 +984,19 @@ footer p {
     }
 
     .sliderContent h3 {
-        font-size: 52px;
+        font-size: 37px;
     }
 
     .sliderContent strong {
-        font-size: 32px;
+        font-size: 30px;
     }
 
     .sliderContent p {
         font-size: 16px;
+    }
+
+    .intro ul {
+        margin-top: 80px;
     }
 
     .intro h2 {
@@ -941,7 +1018,7 @@ footer p {
     }
 
     .intro ul li span {
-        font-size: 16px;
+        font-size: 15px;
         line-height: 19px;
         font-weight: 500;
         margin-top: 20px;
@@ -960,6 +1037,16 @@ footer p {
 
     .features .featuresLeft h4 {
         margin-bottom: 50px;
+        font-size: 40px;
+    }
+
+    .features .featuresLeft h4 sup {
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+    .features .featuresLeft h4 span {
+        font-size: 20px;
     }
 
     .features .featuresLeft {
@@ -980,6 +1067,11 @@ footer p {
         margin-bottom: 50px;
     }
 
+    .features .featuresRight li:nth-last-child(2),
+    .features .featuresRight li:last-child {
+        margin-bottom: 0;
+    }
+
     .features .featuresRight li img {
         height: auto;
     }
@@ -992,7 +1084,7 @@ footer p {
     }
 
     .section {
-        margin-top: 70px;
+        margin-top: 80px;
     }
 
     .section-heading {
@@ -1030,20 +1122,29 @@ footer p {
         margin-right: 19px;
     }
 
-    .floorPlanTabContent figure img {
+    .floorPlanTabContent figure,
+    .floorPlanTabContent figure+figure {
         width: 100%;
-        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .floorPlanTabContent figure h4 {
+        font-size: 16px;
     }
 
     .galleryCarousel .owl-item:not(.active) img {
         transform: none;
     }
 
+    .galleryCarousel img {
+        border-radius: 0;
+    }
+
     body .owl-carousel.galleryCarousel .owl-nav {
         width: 96%;
         left: 2%;
         top: 50%;
-        margin-top: -14px;
+        margin-top: -35px;
     }
 
     body .owl-carousel.galleryCarousel .owl-nav button {
@@ -1060,6 +1161,10 @@ footer p {
 
     .location .section-heading {
         margin-bottom: 10px;
+    }
+
+    .location strong {
+        font-weight: 400;
     }
 
     .location figure img {
@@ -1191,7 +1296,7 @@ footer p {
     .navToggle.collapsed span:nth-child(2) {
         transform: rotate(45deg);
         position: relative;
-        top: 3px;
+        top: 4px;
     }
 
     .navToggle.collapsed span:last-child {
@@ -1204,7 +1309,7 @@ footer p {
         color: #333;
     }
 
-    .modalContent {
+    /* .modalContent {
         top: auto;
         bottom: 0;
         transform: none;
@@ -1212,23 +1317,41 @@ footer p {
         width: 100%;
         max-width: none;
         border-radius: 20px 20px 0 0;
-    }
+    } */
 
     .modalContent .content-inner {
         max-height: 80vh;
         padding: 15px;
     }
 
-    .modalContent .close-modal {
+    /* .modalContent .close-modal {
         right: 10px;
         top: -15px;
-    }
+    } */
 
     #unitplanModal .modalContent {
         width: 100%;
     }
 
+    #unitplanModal .modalContent h4 {
+        font-size: 20px;
+    }
+
     .sticky-enquire {
         display: none;
+    }
+
+    #mainCarousel::after {
+        background: url('../images/bannerOverlaymob.png') no-repeat left bottom;
+        background-size: 100% auto;
+        height: 80px;
+    }
+
+    body .mfp-arrow-left {
+        transform-origin: left !important;
+    }
+
+    body .mfp-arrow-right {
+        transform-origin: right !important;
     }
 }

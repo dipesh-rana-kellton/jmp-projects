@@ -29,9 +29,37 @@ $(document).ready(function () {
         }
     });
 
-    $(window).scroll(function () {
-        let scrollDis = $('#mainCarousel').height() - 100;
-        if ($(this).scrollTop() > scrollDis) {
+
+    $('.popup-gallery').each(function () { // the containers for all your galleries
+        $(this).magnificPopup({
+            delegate: '.owl-item:not(.cloned) a',
+            type: 'image',
+            removalDelay: 500, //delay removal by X to allow out-animation
+            callbacks: {
+                beforeOpen: function () {
+                    // just a hack that adds mfp-anim class to markup 
+                    this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+                    this.st.mainClass = this.st.el.attr('data-effect');
+                }
+            },
+            tLoading: 'Loading image #%curr%...',
+            mainClass: 'mfp-img-mobile',
+            gallery: {
+                enabled: true,
+                navigateByImgClick: true,
+                preload: [0, 1] // Will preload 0 - before current, and 1 after the current image
+            },
+            image: {
+                tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+                titleSrc: function (item) {
+                    return item.el.attr('title') + '<small></small>';
+                }
+            }
+        });
+    });
+
+    $(window).scroll(function (e) {
+        if ($(this).scrollTop() > 100) {
             $('header').addClass('light-bg');
         }
         else {
@@ -80,8 +108,10 @@ $(document).ready(function () {
     })
 
     $('.floorPlanTabContent img[data-toggle="modal"]').on('click', function () {
+        var heading = $(this).attr('alt')
         var url = $(this).attr('src');
         $('#unitplanModal .unitPlanLarge').attr('src', url)
+        $('#unitplanModal h4').text(heading)
     })
 
     if ($(window).width() < 992) {
@@ -100,8 +130,29 @@ $(document).ready(function () {
             else {
                 $('.sticky-enquire').fadeOut()
             }
+
         })
     }
+
+    // console.log($('#luxurious').offset().top)
+    // $(window).scroll(function () {
+
+    //     var scrollPos = $(document).scrollTop();
+    //     $('.mainNav li:not(.enquireBtn) a').each(function () {
+    //         var currLink = $(this);
+    //         var refElement = $(currLink.attr("href"));
+    //         if (refElement.offset().top <= scrollPos && refElement.offset().top + refElement.height() > scrollPos) {
+    //             $('.mainNav ul li').removeClass("active");
+    //             currLink.parent('li').addClass("active");
+    //         }
+    //         else {
+    //             currLink.parent('li').removeClass("active");
+    //         }
+
+    //     });
+
+    // })
+
 
 
 })

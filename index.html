@@ -11,6 +11,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/owl/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl/owl.theme.default.css">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
 </head>
 
@@ -33,7 +35,7 @@
         </nav>
 
         <div class="shantigramLogo">
-            <a href="#"> <img src="images/shantigram.png" alt="Adani Shantigram"> </a>
+            <a href="#"> <img src="images/svg/shantigramLogo.svg" alt="Adani Shantigram"> </a>
         </div>
 
         <div class="navToggle">
@@ -79,7 +81,7 @@
             </div>
             <div class="itemRight">
                 <div class="sliderContent">
-                    <h3>Developing Lifestyle Homes at</h3>
+                    <h3>Capturing The Spirit of</h3>
                     <strong>#Progressive<span>Amdavad</span></strong>
                     <p>Build your life at the newest city centre in North-West Ahmedabad.</p>
                 </div>
@@ -245,34 +247,53 @@
                         </div>
                         <ul class="tabContent floorPlanTabContent">
                             <li id="2bhkplan">
-                                <figure>
-                                    <img src="images/2bhkplan.jpg" data-target="unitplanModal" data-toggle="modal"
-                                        alt="">
-                                    <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
-                                        src="images/2bhkunitplan.jpg" alt="">
-                                    <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
-                                        src="images/mobile/2bhkunitplan.jpg" alt="">
-                                </figure>
+                                <div class="unitPlans">
+                                    <figure>
+                                        <h4>2 BHK : C, D, G & H Block (1 to 10 Floor)</h4>
+                                        <img src="images/2bhkplan.jpg" data-target="unitplanModal" data-toggle="modal"
+                                            alt="2 BHK : C, D, G & H Block (1 to 10 Floor)">
+                                    </figure>
+                                    <figure>
+                                        <h4>Typical Unit Plan - 2 BHK</h4>
+                                        <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
+                                            src="images/2bhkunitplan.png" alt="Typical Unit Plan - 2 BHK">
+                                        <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
+                                            src="images/mobile/2bhkunitplan.jpg" alt="Typical Unit Plan - 2 BHK">
+                                    </figure>
+                                </div>
+
                             </li>
                             <li id="2_5bhkplan">
-                                <figure>
-                                    <img src="images/2.5bhkplan.jpg" data-target="unitplanModal" data-toggle="modal"
-                                        alt="">
-                                    <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
-                                        src="images/2.5bhkunitplan.jpg" alt="">
-                                    <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
-                                        src="images/mobile/2.5bhkunitplan.jpg" alt="">
-                                </figure>
+                                <div class="unitPlans">
+                                    <figure>
+                                        <h4>2.5 BHK : E & F Block (1 to 10 Floor)</h4>
+                                        <img src="images/2.5bhkplan.jpg" data-target="unitplanModal" data-toggle="modal"
+                                            alt="2.5 BHK : E & F Block (1 to 10 Floor)">
+                                    </figure>
+                                    <figure>
+                                        <h4>Typical Unit Plan - 2.5 BHK</h4>
+                                        <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
+                                            src="images/2.5bhkunitplan.jpg" alt="Typical Unit Plan - 2.5 BHK">
+                                        <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
+                                            src="images/mobile/2.5bhkunitplan.jpg" alt="Typical Unit Plan - 2.5 BHK">
+                                    </figure>
+                                </div>
                             </li>
                             <li id="3bhkplan">
-                                <figure>
-                                    <img src="images/3bhkplan.jpg" data-target="unitplanModal" data-toggle="modal"
-                                        alt="">
-                                    <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
-                                        src="images/3bhkunitplan.jpg" alt="">
-                                    <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
-                                        src="images/mobile/3bhkunitplan.jpg" alt="">
-                                </figure>
+                                <div class="unitPlans">
+                                    <figure>
+                                        <h4>3 BHK : A, B, I & J Block (1 to 10 Floor)</h4>
+                                        <img src="images/3bhkplan.jpg" data-target="unitplanModal" data-toggle="modal"
+                                            alt="3 BHK : A, B, I & J Block (1 to 10 Floor)">
+                                    </figure>
+                                    <figure>
+                                        <h4>Typical Unit Plan - 3 BHK</h4>
+                                        <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
+                                            src="images/3bhkunitplan.jpg" alt="Typical Unit Plan - 3 BHK">
+                                        <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
+                                            src="images/mobile/3bhkunitplan.jpg" alt="Typical Unit Plan - 3 BHK">
+                                    </figure>
+                                </div>
                             </li>
                         </ul>
                     </section>
@@ -282,11 +303,17 @@
                     <div class="container">
                         <h3 class="section-heading">Gallery</h3>
                     </div>
-                    <div class="owl-carousel galleryCarousel" id="galleryCarousel1">
-                        <img src="images/Gallery-Prem-1.jpg" alt="Gallery">
-                        <img src="images/Gallery-Prem-2.jpg" alt="Gallery">
-                        <img src="images/Gallery-Prem-3.jpg" alt="Gallery">
-                        <img src="images/Gallery-Prem-4.jpg" alt="Gallery">
+                    <div class="owl-carousel galleryCarousel popup-gallery" id="galleryCarousel1">
+                        <a href="images/Gallery-Prem-1.jpg" data-effect="mfp-zoom-in" title="Elevation (Premium)">
+                            <img src="images/Gallery-Prem-1.jpg" alt="Gallery">
+                            <span>Elevation (Premium)</span>
+                        </a>
+                        <a href="images/Gallery-Prem-2.jpg" data-effect="mfp-zoom-in" title="Foyer"><img
+                                src="images/Gallery-Prem-2.jpg" alt="Gallery"><span>Foyer</span></a>
+                        <a href="images/Gallery-Prem-3.jpg" data-effect="mfp-zoom-in" title="Indoor Game"><img
+                                src="images/Gallery-Prem-3.jpg" alt="Gallery"><span>Indoor Game</span></a>
+                        <a href="images/Gallery-Prem-4.jpg" data-effect="mfp-zoom-in" title="Gym"><img
+                                src="images/Gallery-Prem-4.jpg" alt="Gallery"><span>Gym</span></a>
                     </div>
 
                     <a href="#" class="downloadBrochure">Download Brochure</a>
@@ -301,7 +328,8 @@
                     <div class="features">
                         <div class="featuresLeft">
                             <h4>3 & 5 <span>BHK Flats</span></h4>
-                            <h4><span>Starting from</span> 94 Lacs*# <small>Advance society changes extra | *T&C
+                            <h4><span>Starting from</span> 94 Lacs<sup>*#</sup> <small>Advance society changes extra |
+                                    *T&C
                                     apply</small></h4>
 
                         </div>
@@ -395,34 +423,54 @@
                         </div>
                         <ul class="tabContent floorPlanTabContent">
                             <li id="3bhkplanA">
-                                <figure>
-                                    <img src="images/3bhkplanA.jpg" data-target="unitplanModal" data-toggle="modal"
-                                        alt="">
-                                    <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
-                                        src="images/3bhkunitplanA.jpg" alt="">
-                                    <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
-                                        src="images/mobile/3bhkunitplanA.jpg" alt="">
-                                </figure>
+                                <div class="unitPlans">
+                                    <figure>
+                                        <h4>3 BHK Type A: Block-A-G (1stto 14th floor)</h4>
+                                        <img src="images/3bhkplanA.jpg" data-target="unitplanModal" data-toggle="modal"
+                                            alt="3 BHK Type A: Block-A-G (1stto 14th floor)">
+                                    </figure>
+                                    <figure>
+                                        <h4>Typical Unit Plan - 3 BHK Type A</h4>
+                                        <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
+                                            src="images/3bhkunitplanA.jpg" alt="Typical Unit Plan - 3 BHK Type A">
+                                        <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
+                                            src="images/mobile/3bhkunitplanA.jpg"
+                                            alt="Typical Unit Plan - 3 BHK Type A">
+                                    </figure>
+                                </div>
                             </li>
                             <li id="3bhkplanB">
-                                <figure>
-                                    <img src="images/3bhkplanB.jpg" data-target="unitplanModal" data-toggle="modal"
-                                        alt="">
-                                    <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
-                                        src="images/3bhkunitplanB.jpg" alt="">
-                                    <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
-                                        src="images/mobile/3bhkunitplanB.jpg" alt="">
-                                </figure>
+                                <div class="unitPlans">
+                                    <figure>
+                                        <h4>3 BHK Type B: Block-D (1st to 14th floor)</h4>
+                                        <img src="images/3bhkplanB.jpg" data-target="unitplanModal" data-toggle="modal"
+                                            alt="3 BHK Type B: Block-D (1st to 14th floor)">
+                                    </figure>
+                                    <figure>
+                                        <h4>Typical Unit Plan - 3 BHK Type B</h4>
+                                        <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
+                                            src="images/3bhkunitplanB.jpg" alt="Typical Unit Plan - 3 BHK Type B">
+                                        <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
+                                            src="images/mobile/3bhkunitplanB.jpg"
+                                            alt="Typical Unit Plan - 3 BHK Type B">
+                                    </figure>
+                                </div>
                             </li>
                             <li id="4bhkplan">
-                                <figure>
-                                    <img src="images/4bhkplan.jpg" data-target="unitplanModal" data-toggle="modal"
-                                        alt="">
-                                    <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
-                                        src="images/4bhkunitplan.jpg" alt="">
-                                    <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
-                                        src="images/mobile/4bhkunitplan.jpg" alt="">
-                                </figure>
+                                <div class="unitPlans">
+                                    <figure>
+                                        <h4>4 BHK : Block-B-C-E-F (1st to 14th floor)</h4>
+                                        <img src="images/4bhkplan.jpg" data-target="unitplanModal" data-toggle="modal"
+                                            alt="4 BHK : Block-B-C-E-F (1st to 14th floor)">
+                                    </figure>
+                                    <figure>
+                                        <h4>Typical Unit Plan - 4 BHK</h4>
+                                        <img class="visible-lg" data-target="unitplanModal" data-toggle="modal"
+                                            src="images/4bhkunitplan.jpg" alt="Typical Unit Plan - 4 BHK">
+                                        <img class="visible-sm" data-target="unitplanModal" data-toggle="modal"
+                                            src="images/mobile/4bhkunitplan.jpg" alt="Typical Unit Plan - 4 BHK">
+                                    </figure>
+                                </div>
                             </li>
                         </ul>
                     </section>
@@ -433,10 +481,19 @@
                     <div class="container">
                         <h3 class="section-heading">Gallery</h3>
                     </div>
-                    <div class="owl-carousel galleryCarousel" id="galleryCarousel2">
-                        <img src="images/Gallery-Lux-1.jpg" alt="Gallery">
-                        <img src="images/Gallery-Lux-2.jpg" alt="Gallery">
-                        <img src="images/Gallery-Lux-3.jpg" alt="Gallery">
+                    <div class="owl-carousel galleryCarousel popup-gallery" id="galleryCarousel2">
+                        <a href="images/Gallery-Lux-1.jpg" data-effect="mfp-zoom-in" title="Elevation (Luxurious)">
+                            <img src="images/Gallery-Lux-1.jpg" alt="Gallery">
+                            <span>Elevation (Luxurious)</span>
+                        </a>
+                        <a href="images/Gallery-Lux-2.jpg" data-effect="mfp-zoom-in" title="Gym">
+                            <img src="images/Gallery-Lux-2.jpg" alt="Gallery">
+                            <span>Gym</span>
+                        </a>
+                        <a href="images/Gallery-Lux-3.jpg" data-effect="mfp-zoom-in" title="Indoor Game">
+                            <img src="images/Gallery-Lux-3.jpg" alt="Gallery">
+                            <span>Indoor Game</span>
+                        </a>
                     </div>
 
                     <a href="#" class="downloadBrochure">Download Brochure</a>
@@ -490,11 +547,11 @@
             <div class="social">
                 <a href="#" class="footerLogo"><img src="images/adaniFooterLogo.svg"></a>
                 <ul>
-                    <li><a href="#"><img src="images/facebook.png" alt="facebook"></a></li>
-                    <li><a href="#"><img src="images/instagram.png" alt="instagram"></a></li>
-                    <li><a href="#"><img src="images/linkedin.png" alt="Linkedin"></a></li>
-                    <li><a href="#"><img src="images/twitter.png" alt="Twitter"></a></li>
-                    <li><a href="#"><img src="images/ytube.png" alt="Youtube"></a></li>
+                    <li><a href="#"><img src="images/svg/facebook.svg" alt="facebook"></a></li>
+                    <li><a href="#"><img src="images/svg/instagram.svg" alt="instagram"></a></li>
+                    <li><a href="#"><img src="images/svg/linkedin.svg" alt="Linkedin"></a></li>
+                    <li><a href="#"><img src="images/svg/twitter.svg" alt="Twitter"></a></li>
+                    <li><a href="#"><img src="images/svg/ytube.svg" alt="Youtube"></a></li>
                 </ul>
 
                 <p class="contactInfo">
@@ -552,6 +609,7 @@
         <div class="modalOverlay"></div>
         <div class="modalContent">
             <div class="content-inner">
+                <h4></h4>
                 <img class="unitPlanLarge" src="" alt="">
                 <a href="javascript:void()" class="close-modal"><img src="images/svg/closeIcon.svg" alt=""></a>
             </div>
@@ -564,7 +622,12 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"
         integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
     <script src="js/owl.carousel.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
     <script src="js/custom.js"></script>
+
+    <script>
+
+    </script>
 
 </body>
 
